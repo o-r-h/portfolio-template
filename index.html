@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#030806" />
+  <meta name="description" content="Portafolio de desarrollo, arquitectura de software y agentes de IA." />
+  <title>OR // Digital Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="./main.js"></script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="letterbox top" aria-hidden="true"></div>
+  <div class="letterbox bottom" aria-hidden="true"></div>
+
+  <div class="topbar">
+    <a class="brand" href="#home" aria-label="Inicio"><span class="brand-mark">OR</span><span>OR<span class="dim">_SYSTEMS</span></span></a>
+    <div class="system-status"><span class="status-dot"></span><span id="renderer-status">INITIALIZING VISUAL SYSTEM</span></div>
+    <button class="sound-toggle" id="motion-toggle" type="button" aria-pressed="false">MOTION: ON</button>
+  </div>
+
+  <main id="home">
+    <section class="intro" id="intro">
+      <p class="eyebrow">PORTFOLIO TEMPLATE / 01 — 05</p>
+      <h1>PORT<br /><span>FOLIO</span><br /><h2>PORTFOLIO.</h2></h1>
+      <p class="intro-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+      <div class="intro-bottom"><span>DRAG TO ROTATE</span><span class="scroll-hint">CLICK A CARD TO OPEN <span aria-hidden="true">↗</span></span></div>
+    </section>
+
+    <div id="scene-wrap">
+      <canvas id="scene-canvas" tabindex="0" aria-label="Menú interactivo 3D. Arrastra para girar, flechas izquierda y derecha para navegar, Enter para abrir el módulo frontal."></canvas>
+      <div class="scene-vignette" aria-hidden="true"></div>
+      <div class="scene-crosshair" aria-hidden="true"><span></span><span></span></div>
+      <div class="scene-caption" aria-hidden="true"><span>VOX INTERFACE / NAVIGATION LAYER</span><span>01 — 05</span></div>
+      <nav class="fallback-nav" aria-label="Secciones del portafolio">
+        <button type="button" data-section="profile" aria-label="Profile"><b>01</b><span>PROFILE</span></button>
+        <button type="button" data-section="projects" aria-label="Projects"><b>02</b><span>PROJECTS</span></button>
+        <button type="button" data-section="architecture" aria-label="Stack"><b>03</b><span>STACK</span></button>
+        <button type="button" data-section="experience" aria-label="Experience"><b>04</b><span>EXPERIENCE</span></button>
+        <button type="button" data-section="contact" aria-label="Contact"><b>05</b><span>CONTACT</span></button>
+      </nav>
+    </div>
+
+     <section class="bottomline" aria-label="Resumen">
+      <div><span class="micro-label">FOCUS</span><strong>FRONTEND · BACKEND</strong></div>
+      <div><span class="micro-label">APPROACH</span><strong>THINK IN SYSTEMS</strong></div>
+      <div><span class="micro-label">MODE</span><strong>BUILD · TEST · IMPROVE</strong></div>
+    </section>
+  </main>
+
+  <section class="info-panel" id="info-panel" aria-labelledby="panel-title" aria-hidden="true" inert>
+    <div class="panel-backdrop" data-close="true"></div>
+    <article class="panel-card">
+      <div class="panel-top"><span id="panel-index">MODULE / 01</span><button id="close-panel" class="close-button" type="button" aria-label="Cerrar panel">CLOSE <span>×</span></button></div>
+      <p class="eyebrow" id="panel-kicker">SYSTEM PROFILE</p>
+      <h2 id="panel-title">Profile</h2>
+      <div id="panel-content" class="panel-content"></div>
+      <div class="panel-footer"><span>OR // DIGITAL PORTFOLIO</span><span>END OF MODULE</span></div>
+    </article>
+  </section>
+
+  <footer><span>© 2026 OR / PERSONAL PORTFOLIO</span><span>DESIGNED AS AN INTERFACE, BUILT AS A SYSTEM.</span></footer>
+</body>
+</html>
