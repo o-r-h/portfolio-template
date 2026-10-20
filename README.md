@@ -12,6 +12,10 @@ The project was created with **Claude Opus 5.5 + GLM 5.3**. The original project
 - Responsive HTML details panel and a navigation fallback
 - Placeholder copy and sample images ready to replace with your own content
 
+## Screenshot
+
+![Screenshot of the 3D portfolio template](https://i.ibb.co/LDJ4bVQq/portfolio-template.png)
+
 ## Getting started
 
 You’ll need Node.js and npm. The project’s scripts use Vite; install it as a development dependency if it is not already available:
